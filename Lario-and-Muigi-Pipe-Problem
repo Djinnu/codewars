@@ -1,0 +1,26 @@
+function pipeFix(numbers){
+  let arr = []
+  count = numbers[0]
+  while(count <= numbers[numbers.length - 1]) {
+    arr.push(count)
+    count++
+  }
+  return arr
+}
+
+//if arguments are numbers, instead of an array:
+
+function pipeFix(numbers){
+    let numArr = []
+    let solArr = []
+    for(let i = 0; i < arguments.length; i++) {
+      numArr.push(arguments[i])
+    }
+    let count = numArr[0]
+    while(count <= numArr[numArr.length - 1]){
+      solArr.push(count)
+      count++        
+    }
+    
+    return solArr
+  }
