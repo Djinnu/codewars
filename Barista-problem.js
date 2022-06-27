@@ -1,11 +1,23 @@
-function barista(coffees){
-    let sortedArr = coffees.sort((a,b) => a - b)
-    let waitTimeArr = sortedArr.map((x,i) => {
-       return sortedArr.slice(0, i + 1).reduce((a, b) => a + b + 2)
-    })
-    if (waitTimeArr.length === 0) {
-     return 0
-    } else {
-     return waitTimeArr.reduce((acc, c) => acc + c)
+var humanYearsCatYearsDogYears = function(humanYears) {
+    let humanYears = humanYears
+    let catYears = 0
+    let dogYears = 0
+
+    for (let i = 1; i <= humanYears; i++) {
+        if (i === 1) {
+            catYears += 15
+            dogYears += 15
+        } else if (i === 2) {
+            catYears += 9
+            dogYears += 9
+        } else {
+            catYears += 4
+            dogYears += 5
+        }
     }
+
+    console.log(catYears, dogYears)
 }
+
+humanYearsCatYearsDogYears(2)
+  
