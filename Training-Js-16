@@ -1,0 +1,17 @@
+function cutIt(arr){
+  let length = arr[0].length
+  
+  arr.forEach(x => {
+    if(x.length < length) {
+      length = x.length
+    }
+  })
+  
+  return arr.map(x => x.slice(0, length))
+}
+
+//or
+function cutIt(arr){
+    const minLength = Math.min(...arr.map(x => x.length));
+    return arr.map(x => x.slice(0, minLength));
+}
